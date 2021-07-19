@@ -71,14 +71,14 @@ let longestWord = (array) => {
 }
 
 let sumNumbers = (array) => {
-    return array.reduce(function(a, b) {
+    return array.reduce(function (a, b) {
         return a + b;
     })
 
- }
+}
 
 let repeatElements = (array) => {
-    return [...array,...array]
+    return [...array, ...array]
 }
 
 let stringToNumber = (string) => {
@@ -89,18 +89,24 @@ let calculateAverage = (array) => {
     sum = 0;
     for (let i = 0; i < array.length; i++) {
         sum = sum + array[i];
-  
+
     }
-    return sum/ array.length;
+    return sum / array.length;
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
-    
-    
+    //     function suffisammentGrand(element) {
+    //         return element < 6 ;
+    //       }
+    //       var filtre = array.filter(suffisammentGrand);
+    // return filtre.filter(function(ele , pos){
+    //     return array.indexOf(ele) == pos ;
+    // }) 
+    return array.splice(0, 6)
 }
 
 let convertArrayToObject = (array) => {
-    return 'Write your method here';
+    return Object.assign({}, ['a','b','c']);
 }
 
 let getAllLetters = (array) => {

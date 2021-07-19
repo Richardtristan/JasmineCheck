@@ -21,59 +21,82 @@ let reverseWordsInArray = (array) => {
 }
 
 let everyPossiblePair = (array) => {
-    return array.sort().flatMap( (value, index) => array.slice(index+1).map( word => [value,word]) )
+    return array.sort().flatMap((value, index) => array.slice(index + 1).map(word => [value, word]))
 }
 
 let allElementsExceptFirstThree = (array) => {
-    return 'Write your method here';
+    return array.splice(3, 10);
 }
 
 let addElementToBeginning = (array, element) => {
-    return 'Write your method here';
+    array = [element].concat(array);
+    return array;
 }
-
 let sortByLastLetter = (array) => {
-    return 'Write your method here';
+    return array.sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
 
 let getFirstHalf = (string) => {
-    return 'Write your method here';
+    return string.substring(0, 3);
 }
 
 let makeNegative = (number) => {
-    return 'Write your method here';
+    return -Math.abs(number);
 }
 
 let numberOfPalindromes = (array) => {
-    return 'Write your method here';
+
+    let isPalindrome = 0;
+
+    for (let i = 0; i < array.length / 2; i++) {
+
+        if (array[i] !== array[array.length - i]) {
+            isPalindrome++;
+
+        }
+    }
+
+    return isPalindrome;
 }
 
+
 let shortestWord = (array) => {
-    return 'Write your method here';
+    return array.reduce((a, b) => a.length <= b.length ? a : b)
 }
 
 let longestWord = (array) => {
-    return 'Write your method here';
+    return array.sort(function (a, b) {
+        return b.length - a.length
+    })[0];
 }
 
 let sumNumbers = (array) => {
-    return 'Write your method here';
-}
+    return array.reduce(function(a, b) {
+        return a + b;
+    })
+
+ }
 
 let repeatElements = (array) => {
-    return 'Write your method here';
+    return [...array,...array]
 }
 
 let stringToNumber = (string) => {
-    return 'Write your method here';
+    return Number(string);
 }
 
 let calculateAverage = (array) => {
-    return 'Write your method here';
+    sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+  
+    }
+    return sum/ array.length;
 }
 
 let getElementsUntilGreaterThanFive = (array) => {
-    return 'Write your method here';
+    
+    
 }
 
 let convertArrayToObject = (array) => {

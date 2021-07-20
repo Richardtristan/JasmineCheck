@@ -106,35 +106,63 @@ let getElementsUntilGreaterThanFive = (array) => {
 }
 
 let convertArrayToObject = (array) => {
-    return Object.assign({}, ['a','b','c']);
+    let entries = new Map([
+        [array[0], array[1]],
+        [array[2], array[3]],
+        [array[4], array[5]],
+    ]);
+    const obj = Object.fromEntries(entries);
+    return obj;
 }
 
 let getAllLetters = (array) => {
-    return 'Write your method here';
+    array1 = array.join("");
+    let array2 = [];
+    for (let i = 0; i < array1.length; i++) {
+        array2.push(array1[i]);
+
+    }
+    array2 = array2.sort()
+    return [...new Set(array2)];/*Array.from(new Set(array2))*/
 }
 
 let swapKeysAndValues = (object) => {
-    return 'Write your method here';
+    const swapped = Object.fromEntries(Object.entries(object).map(a => a.reverse()))
+    return swapped;
 }
 
 let sumKeysAndValues = (object) => {
-    return 'Write your method here';
+    let tab = Object.values(object);
+    var tab2 = Object.keys(object).join(",").split(",").map(x => +x);
+    var result = 0;
+
+    for (i = 0; i < tab.length; i++) {
+        result += tab[i]; // on additionne d'abord les valeur de tab
+    }
+    for (j = 0; j < tab2.length; j++) {
+        result += tab2[j]; // puis on ajoute les valeurs de tab2
+    }
+    return result;
 }
 
 let removeCapitals = (string) => {
-    return 'Write your method here';
+    return string.match(/[^A-Z]/g, '').join("")
 }
 
 let roundUp = (number) => {
-    return 'Write your method here';
+    return Math.ceil(number);
 }
 
 let formatDateNicely = (date) => {
-    return 'Write your method here';
+    let year = date.getFullYear().toString();
+    let day = (date.getDay() + 1).toString();
+    let month = (date.getMonth() + 1).toString();
+    return "0" + day + "/" + "0" + month + "/" + year;
 }
 
 let getDomainName = (string) => {
-    return 'Write your method here';
+    // string.split("@").pop().split(".").slice(0,1).join("")
+    return string.filter(@);
 }
 
 let titleize = (string) => {
